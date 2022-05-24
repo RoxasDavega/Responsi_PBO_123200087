@@ -82,15 +82,7 @@ public class ControllerMovie {
                 
                 int baris = movieView.tabel.getSelectedRow();
                 data = movieView.tabel.getValueAt(baris, 0).toString();
-                String dataUpdate[] = new String[4];
-                dataUpdate[0] = movieView.tabel.getValueAt(baris, 0).toString();
-                dataUpdate[1] = movieView.tabel.getValueAt(baris, 1).toString();
-                
-                
-                System.out.println(data);
                  
-                
-                
             }
            });
                   
