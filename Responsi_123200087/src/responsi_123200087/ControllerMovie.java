@@ -19,7 +19,7 @@ import javax.swing.JTable;
 public class ControllerMovie {
     ModelMovie modelContact;
     MovieView movieView;
-    public String data;
+    private String data;
     public ControllerMovie(ModelMovie modelContact, MovieView movieView){
         this.modelContact = modelContact;
         this.movieView = movieView;
