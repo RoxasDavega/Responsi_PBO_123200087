@@ -34,7 +34,7 @@ public class ModelMovie {
         }
     }
     
-    public String[][] readContact(){
+    public String[][] readData(){
         try{
             int jmlData = 0;
             
@@ -134,7 +134,7 @@ public class ModelMovie {
         }
     }
     
-    public void deleteContact (String Judul) {
+    public void deleteData (String Judul) {
         try{
             String query = "DELETE FROM movie WHERE judul = '"+Judul+"'";
             statement = koneksi.createStatement();

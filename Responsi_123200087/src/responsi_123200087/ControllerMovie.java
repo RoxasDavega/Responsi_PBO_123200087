@@ -25,7 +25,7 @@ public class ControllerMovie {
         this.movieView = movieView;
         
         if (modelContact.getBanyakData()!=0) {
-            String dataMovie[][] = modelContact.readContact();
+            String dataMovie[][] = modelContact.readData();
             movieView.tabel.setModel((new JTable(dataMovie, movieView.namaKolom)).getModel());
         }
         else {
@@ -42,7 +42,7 @@ public class ControllerMovie {
                 double Rating = (Alur+Penokohan+Akting)/3;
                 modelContact.insertData(Judul, Alur, Penokohan, Akting, Rating);
          
-                String dataMovie[][] = modelContact.readContact();
+                String dataMovie[][] = modelContact.readData();
                 movieView.tabel.setModel((new JTable(dataMovie, movieView.namaKolom)).getModel());
             }
         });
@@ -58,7 +58,7 @@ public class ControllerMovie {
                 double Rating = (Alur+Penokohan+Akting)/3;
                 modelContact.updateData(Judul, Alur, Penokohan, Akting, Rating);
 
-                String dataMovie[][] = modelContact.readContact();
+                String dataMovie[][] = modelContact.readData();
                 movieView.tabel.setModel((new JTable(dataMovie, movieView.namaKolom)).getModel());
             }
         });
@@ -93,8 +93,8 @@ public class ControllerMovie {
                 "Apa anda ingin menghapus Judul " + data + "?", "Pilih Opsi...", JOptionPane.YES_NO_OPTION);
 
             if (input == 0) {
-                modelContact.deleteContact(data);
-                String dataMovie[][] = modelContact.readContact();
+                modelContact.deleteData(data);
+                String dataMovie[][] = modelContact.readData();
                 movieView.tabel.setModel((new JTable(dataMovie, movieView.namaKolom)).getModel());
             } else {
                 JOptionPane.showMessageDialog(null, "Tidak Jadi Dihapus");
